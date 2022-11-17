@@ -90,11 +90,6 @@ public class Node {
     }
 
     public String printNode() {
-        // if (this.tempValue == 0 && this.tempNode == null) {
         return "N:(" + Double.toString(this.value1) + "," + Double.toString(this.value2) + ")";
-        // }
-        // else {
-        // return "temps not empty!!!";
-        // }
     }
 }

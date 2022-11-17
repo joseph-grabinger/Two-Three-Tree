@@ -130,10 +130,7 @@ public class TwoThreeTree {
             if (node.value2 >= node.parent.value2) {
                 node.parent.tempValue = node.value2;
 
-                node.parent.tempNode = new Node(node.tempValue, 0, node, node.right, node.tempNode, null); // unsure why
-                                                                                                           // parent is
-                                                                                                           // just
-                                                                                                           // 'node'
+                node.parent.tempNode = new Node(node.tempValue, 0, node, node.right, node.tempNode, null);
                 node.parent.tempNode.left.parent = node.parent.tempNode.center.parent = node.parent.tempNode;
             } else if (node.value2 >= node.parent.value1) {
                 // shift to right
@@ -162,7 +159,6 @@ public class TwoThreeTree {
                 node.parent.value2 = node.value2;
 
                 node.parent.right = new Node(node.tempValue, 0, node.parent, node.right, node.tempNode, null);
-                // node.right.parent = node.tempNode.parent = node.parent.right; old
                 node.parent.right.left.parent = node.parent.right.center.parent = node.parent.right;
 
             } else {
